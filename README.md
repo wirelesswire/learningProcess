@@ -1,1 +1,1 @@
-"# learningProcess"
+stare rzeczy 
