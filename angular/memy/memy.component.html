@@ -1,0 +1,66 @@
+<!-- Utwórz stronę o wyglądzie zbliżonym do układu 
+prezentowanego na dołączonym pliku graficznym.
+Strona ma działać jak ranking memów na
+ zasadzie średniej oceny.
+Jeżeli meme ma tą samą średnią to
+wyżej w rankungu jest meme o większej
+liczbie głosów. Dla meme o tej samej średniej 
+i liczbie głosów kolejność prezentacji jest dowolna 
+(nawet jeżeli to są miejsca na podium). Na początku dla
+uproszczenia gdy nie ma żadnych ocen memy wyświetlaj w 
+kolejności zdefiniowanej w modelu danych.
+Model danych dla pojedynczego meme powinien
+zawierać minimum: nazwę meme, adres url obrazka,
+liczbę głosów, średnią ocenę. Można rozbudować
+o historię oddanych głosów. Oceny jakie może 
+oddać uz są w sklaki od 1 do 10. Na stronie 
+powinno się znaleźć minimum 10 memów. -->
+<div id="wrapper">
+    <div class="inside" id="los">
+
+        <div class="memewrap" >
+
+ 
+            <h2 > : {{losowy.nazwa}} </h2>
+            <img src="{{losowy.path}}" alt="">
+
+            <p>oceny : {{wypiszOceny(losowy)}}</p>
+            <p>sredniaocen : {{sredniaOcen(losowy)}}</p>
+
+        </div>
+
+    </div>
+    <div class="inside" id="lista">
+        <div *ngFor="let i of memes;index as x" class="meme">
+            <div class="memewrap">
+                <div>
+                    <h2>{{x}} : {{i.nazwa}}</h2>
+                    <img src="{{i.path}}" alt="">
+                </div>
+                <p>oceny : {{wypiszOceny(i) }}</p>
+                <p >sredniaocen : {{sredniaOcen(i)}}</p>
+                <input id="img{{x}}" type="number">
+                <button (click)="ocen(x)"> oceń</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="inside" id="ostatnioceniony">
+
+        <div class="memewrap" *ngIf="ostatniooceniony==null">
+            nie oceniłeś zżadnego mema ostatnio
+                -->
+        </div>
+        <div class="memewrap" *ngIf="ostatniooceniony!=null">
+
+ 
+            <h2 > : {{ostatniooceniony.nazwa}} </h2>
+            <img src="{{ostatniooceniony.path}}" alt="">
+
+            <p>oceny : {{ wypiszOceny( ostatniooceniony)}}</p>
+            <p>sredniaocen : {{sredniaOcen(ostatniooceniony)}}</p>
+
+        </div>
+    </div>
+
+</div>

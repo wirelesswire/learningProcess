@@ -1,0 +1,6 @@
+#wrap{
+    display: flex;
+}
+#wrap>div{
+    flex:1;
+}

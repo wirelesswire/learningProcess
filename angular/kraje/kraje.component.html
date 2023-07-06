@@ -1,0 +1,39 @@
+<div id="wrap">
+    <div id="lewy">
+        <p>wybierz kontynent</p>
+        <select name="" id="kontynent" (input)="zmianakontynent()">
+            <option *ngFor="let i of continents" value="{{i}}">
+                {{i}}
+            </option>
+        </select>
+    </div>
+    <div id="srodkowy">
+        <div *ngIf="selectedcontinent.length==0">
+           <p> prosze wybrac kontynent</p>
+        </div>
+
+        <div *ngIf="selectedcontinent.length!=0">
+            <p>wybierz kraj </p>
+            <select name="" id="kraj" (input)="zmianakraj()">
+                <option value="{{i.name}}" *ngFor="let i of selectedcontinent">
+                    {{i.name}}
+                </option>
+            </select>
+
+        </div>
+        
+    </div>
+    <div id="prawy">
+        <div *ngIf="selectedcountry == null ">
+            <p> prosze wybrać kraj </p> 
+
+        </div>
+        <div *ngIf="selectedcountry != null ">
+            nazwa :{{selectedcountry.name}} <br>
+            populacja : {{selectedcountry.population}}
+            <img src="{{selectedcountry.flagpath}}" alt="">
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,6 @@
+#wrap{
+    display: flex;
+}
+#lewy,#srodkowy,#prawy{
+    flex: 1;
+}

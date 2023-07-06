@@ -1,0 +1,44 @@
+<div id="wrapper">
+    <div id="koszty">
+        <h2>Koszty</h2>
+        <p>dodaj koszt </p>
+        <p>ilość obcej waluty <input id="obcakoszty" type="number"></p>
+        <p>kurs wymiany <input id="kurskoszty" type="number"></p>
+        <button (click)="dodaj('koszt')"> dodaj koszt </button>
+        <p *ngFor="let i of koszty;index as c ">
+            ilosc : {{i.kwota}}  kurs:{{i.kurs}}  wartosc: {{i.wartosc}}<button (click)="usun('koszty',c)">x</button>
+        </p>
+
+    </div>
+    <div id="przychody">
+        <h2>Przychody</h2>
+        <p>dodaj przychod</p>
+        <p>ilość obcej waluty <input id="obcaprzychody" type="number"></p>
+        <p> kurs wymiany <input id="kursprzychody" type="number"></p>
+        <button (click)="dodaj('przychod')">dodaj przychod</button>
+        <p *ngFor="let i of przychody;index as c ">
+            ilosc : {{i.kwota}}  kurs:{{i.kurs}}  wartosc: {{i.wartosc}} <button (click)="usun('przychody',c)">x</button>
+        </p>
+
+
+
+    </div>
+</div>
+
+<div id="podsumowanie">
+<h2>podsumowanie</h2>
+twoje koszty: {{suma('koszty')}}  <br>
+twoje przychody: {{suma('przychody')}} <br>
+dochod brutto:{{ suma('przychody')  - suma('koszty')}}  <br>
+dochód netto: <span *ngIf="suma('przychody')  - suma('koszty')>0">(-19%) {{ zaokraglij( ( suma('przychody')  - suma('koszty') )*0.81 )}} </span>  <span *ngIf="suma('przychody')  - suma('koszty')<0">jestes na minusie {{ suma('przychody')  - suma('koszty')}}  </span> <br>
+</div>
+<!-- Zgodnie z dołączoną grafiką wykonaj aplikację
+     internetową wspierającą rozliczanie podatku dochodowego 
+     z obrotu walutami wirtualnymi.
+Koszt w złotówkach to każda operacja podczas której dochodzi 
+do transferu pieniędzy na rachunek kryptowalutowy.
+Dochód w złotówkach to każda operacja podczas której otrzymujemy 
+pieniądze z rachunku kryptowalutowego.
+Zysk lub stratę oblicza się od dochodu odejmując koszty w PLN.
+ Jeżeli mamy zysk należy odprowadzić od niego 19% podatku.
+  Jeżeli mamy stratę podatku nie odprowadza się -->

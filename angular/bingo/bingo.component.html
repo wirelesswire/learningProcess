@@ -1,0 +1,11 @@
+<div id="wrap">
+<div class="row" *ngFor="let i of pola;index as x" >
+    <div class="pole unchecked"  *ngFor="let j of i;index as y " id="pole{{x}}{{y}}"   (click)="klik(x,y)">
+        {{j.name}}
+    </div>
+
+
+</div>
+
+</div>
+<span id="bingoindicator" *ngIf="isbingo"> bingo <button (click)="reset()">reset</button></span>

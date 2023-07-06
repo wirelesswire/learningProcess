@@ -1,0 +1,25 @@
+<div id="wrap">
+
+    <div>
+        <h2>obliczam rezystancje zastepczą </h2>
+        <p>
+            szeregowo <input type="radio" name="type" (click)="zmienradio(true)" checked>
+            równolegle <input type="radio" name="type" (click)=" zmienradio(false)">
+        </p>
+
+        <img src="assets/3.jpg" alt="" *ngIf="szeregowo">
+        <img src="assets/1.jpg" alt="" *ngIf="!szeregowo">
+    </div>
+    <div>
+        <h2>obliczonna rezystancja zastepcza to</h2> 
+        {{wynikObliczen()}}
+        <p>rezystancje składowe : <p *ngFor="let i of rezystancje;index as j">{{i}} <button (click)="usun(j)">x</button>  </p>
+        
+        <p><input type="number" id="rezy"></p>
+        <p><button (click)="dodaj()"> dodaj</button> </p>
+  
+        <p> <button (click)="usunwszystko()"> usun wszystkie </button></p>
+       
+    </div>
+
+</div>

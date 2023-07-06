@@ -1,0 +1,46 @@
+body{
+    /* background-color: rgb(95, 95, 95); */
+    margin:  0;
+    padding: 0;
+}
+#wrapper{
+    display: flex;
+}
+.inside{
+    /* flex :1; */
+    text-align: center;
+}
+
+#los{
+flex: 1;
+background-color: rgba(10, 143, 50, 0.877);
+}
+#lista{
+    flex: 5;
+    background-color: rgba(10, 52, 143, 0.877);
+
+}
+#ostatnioceniony{
+    flex: 1;
+    background-color: rgba(79, 10, 143, 0.877);
+
+}
+img{
+    max-width: 300px;
+}
+.meme{
+    text-align:left;
+    /* display: flex;
+    flex-direction: row; */
+}
+.memewrap{
+    /* flex: 1; */
+    /* display: flex;
+    text-align: center; */
+}
+/* .memewrap>div :nth-child(0){
+flex: 1;
+}
+.memewrap>div :nth-child(0){
+flex: 2;
+} */

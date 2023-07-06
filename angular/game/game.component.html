@@ -1,0 +1,18 @@
+
+<div id="wrap">
+    <div class="row" *ngFor="let i of pola ;index as ii ">
+        <div  class="pole" *ngFor="let x of i;index as xx " (click)="klik(ii,xx)">
+            <!-- <div class="pole"> -->
+                <p *ngIf = "!x.isopen">
+                    <!-- {{x.name}} -->
+
+                </p>
+    
+                <!-- {{x.name}} -->
+                <img  *ngIf = "x.isopen" src="{{x.path}}" alt="">
+            <!-- </div> -->
+            
+        </div>
+    </div>
+    
+</div>

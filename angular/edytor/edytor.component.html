@@ -1,0 +1,24 @@
+<div id="changers">
+    <button (click)="italic($event)"> <i>i</i></button>
+    <button (click)="bold($event)"> <b>B</b></button>
+    <button class="line" (click)="line('u',$event)"> <u>U</u></button>
+    <button class="line" (click)="line('t',$event)"> <del>Y</del></button>
+    <select (input) = "size()" name="wielkosc" id="wielkosc">
+        <option *ngFor=" let i of dummyarray(10,40)" value="{{i}}">
+            {{i}}
+        </option>
+
+    </select>
+    <button class="align" (click)="textal('l',$event)">lewo</button>    
+    <button class="align" (click)="textal('s',$event)">srodek</button>
+    <button class="align" (click)="textal('p',$event)">prawo</button>
+    <input (change)="color()" id="color" type="color">
+    <button id="low" (click)="case('l',$event)">a</button>
+    <button id="up" (click)="case('u',$event)">A</button>
+</div>
+<div id="text">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Iure, incidunt ex porro sed corrupti culpa, numquam soluta 
+     molestias a, rem quisquam eum iste eveniet eaque repellendus
+      minima aliquam blanditiis nam!
+</div>

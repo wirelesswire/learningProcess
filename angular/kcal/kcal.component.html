@@ -1,0 +1,45 @@
+
+<div id="wrap">
+    <div id="wybor">
+        <div>
+            <p>wybierz płeć </p>
+            kobieta<input  value="kobieta" type="radio" name="plec" [(ngModel)]="plec">
+            mezczyzna<input value="mezczyzna" type="radio" name="plec" [(ngModel)]="plec">
+        </div> 
+        <div>
+            <p> wybierz aktywnosc</p>
+            niska        <input type="radio" name="aktywnosc" value="niska" [(ngModel)]="aktywnosc">
+            umiarkowana  <input type="radio" name="aktywnosc" value="umiarkowana" [(ngModel)]="aktywnosc">
+            wysoka       <input type="radio" name="aktywnosc" value="wysoka" [(ngModel)]="aktywnosc">
+        </div>
+    </div>
+    
+
+
+    <div>
+        <h2>dodaj produkt</h2>
+        <select id="selecteditem">
+            <option *ngFor="let i of jedzenia"  value="">{{i.nazwa}} {{i.ilosc}}g {{i.kcal}} kcal</option>
+        </select>
+        <button (click)="dodaj()">dodaj</button>
+
+        <p>lista dodanych produktów </p>
+        <ul>
+            <li *ngFor =" let i of dodane;index as j">{{i.nazwa}} {{i.ilosc}}g {{i.kcal}} kcal  <button (click)="usun(j)">x</button></li>
+
+        </ul>
+        <button (click)="usunwszystko()"> usun wszystko  </button>
+
+    </div>
+
+<div>
+ <h2>łączna kaloryczność : </h2>
+    {{lacznekcal()}} kcal  łącznie 
+
+    <div [style.background-color]="kolor">
+        {{czysiemiesci()}}
+    </div>
+
+</div>
+
+</div>

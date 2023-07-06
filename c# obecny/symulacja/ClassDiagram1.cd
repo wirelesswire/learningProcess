@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="simulation.Act">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAUAAAAAAAAAAAAAgAAAAAAQgoAAAAAAAAAAA=</HashCode>
+      <FileName>act.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="from" />
+      <Field Name="to" />
+      <Field Name="who" />
+      <Field Name="affected" />
+      <Field Name="dead" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="simulation.Move">
+    <Position X="5.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>act.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.Apeerance">
+    <Position X="7.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>act.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="what" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="simulation.epochPass">
+    <Position X="12.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>act.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.Eat">
+    <Position X="14.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>act.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.DraxStanding">
+    <Position X="16.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>act.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.Die">
+    <Position X="3.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>act.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.selfDestruct">
+    <Position X="10" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>act.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.Animal">
+    <Position X="10.5" Y="14.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgUAAAQEogAMBAFBAAAAQggAAQAAIgAgIEFEBAAAkA=</HashCode>
+      <FileName>Animal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="stats" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="simulation.statList&lt;T&gt;" Collapsed="true">
+    <Position X="24.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Board.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.Board">
+    <Position X="6" Y="17.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AgBAAEAUAAAAIECACoAEAAUABoAAgiIEAgAAABABEAA=</HashCode>
+      <FileName>Board.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="organisms" />
+      <Property Name="plants" />
+      <Property Name="herbivores" />
+      <Property Name="carnivores" />
+      <Property Name="mountains" />
+      <Property Name="lakes" />
+      <Property Name="corpses" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="simulation.Carnivore">
+    <Position X="12" Y="23.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAEACAIAAAAAAABAEAAAAAAAEAgAEAAAAAAAA=</HashCode>
+      <FileName>Carnivore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.Corpse">
+    <Position X="7" Y="14.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Corpse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.epoch">
+    <Position X="7" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAIAAAAAAAAAAAA=</HashCode>
+      <FileName>epoch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.MyExtensions" Collapsed="true">
+    <Position X="22.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>helper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.helper" Collapsed="true">
+    <Position X="24.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAFAgAICBA=</HashCode>
+      <FileName>helper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.Herbivore">
+    <Position X="9" Y="23.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAEACAIAAAAAAABAEAAAAAAAEAgAEAAAAAAAA=</HashCode>
+      <FileName>herbivore.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="simulation.Lake">
+    <Position X="3.5" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAABAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Lake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.Mountain">
+    <Position X="17.75" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAABAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Mountian.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.ObjectOnMap">
+    <Position X="10.5" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAIAAABAAAABAAAAABAACAA4AAAAAAAAAA=</HashCode>
+      <FileName>ObjectOnMap.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="coords" />
+      <Field Name="board" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="simulation.Node" Collapsed="true">
+    <Position X="22.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAEAAABAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>organism.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.Organism">
+    <Position X="10.75" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAhAAAAEAAAABAIAAAAAIAAAIAAAAA=</HashCode>
+      <FileName>organism.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="simulation.Plant">
+    <Position X="15" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIBAAAABAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simulation.Simulation">
+    <Position X="2.25" Y="16.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>BAAACMKAAEAAAQQAAAAAAAAAAABAAAAFIEACMSowAAA=</HashCode>
+      <FileName>simulation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="board" />
+      <Field Name="currentEpoch" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="simulation.stats">
+    <Position X="15.5" Y="18.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABkwAQAAACAAAEFAAwAAAAAAgAAAAAAAABAAAAgAAA=</HashCode>
+      <FileName>stats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleInitializer">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQAAAAAAAAEAAAFEAJQAEgAAEAAAAAAAgAEA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="simulation.coords">
+    <Position X="7.25" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgIAAAAAAAAAAAARAAAAABABgAAASAAA=</HashCode>
+      <FileName>coords.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="simulation.IDieable" Collapsed="true">
+    <Position X="22.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>organism.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="simulation.Reproducable" Collapsed="true">
+    <Position X="24.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>organism.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

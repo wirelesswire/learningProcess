@@ -1,0 +1,19 @@
+<input type="number" id="x" (input)="zmiana()">
+<!-- <input type="number" id="y" (input)="zmiana()"> -->
+<div>
+    <div *ngFor="let i of fakearray(rowsx);index as x" class="row">
+        <div *ngFor="let j of fakearray(colsy);index as y   " class="column">
+            <input type="number" (input)="zmienwartosc(x,y,$event)">
+
+
+        
+        </div>
+
+
+
+    </div>
+
+</div>
+<div style="text-align: center;">
+    {{wyznacznikmacierzy}}
+  </div>
