@@ -1,0 +1,51 @@
+html:root{
+    --szerokosc:20px;
+    --wysokosc:100px;
+
+}
+.czesc{
+    --szerokosc:20px;
+    --wysokosc:100px;
+
+    background-color: rgb(128, 127, 125);
+    position:absolute;
+    width: var(--szerokosc);
+    height: var(--wysokosc);
+    text-align: center;
+    top:50%;
+    left:50%;
+}
+.clicked{
+    background-color: red;
+}
+#wrap{
+    margin: 0 auto ;
+    width: 98vw;
+    height: 98vh;
+    
+    background-color: rgb(116, 113, 116);
+}
+#jeden{    
+    transform:rotate(90deg) translate(-90px,0);
+}
+#dwa{
+    transform: translate(40px,-50px);
+}
+#trzy{
+    transform: translate(40px,50px);
+}
+#cztery{
+    transform: rotate(90deg);
+}
+#piec{
+    transform: translate(-40px,50px);
+}
+#szesc{
+    transform: translate(-40px,-50px);
+}
+
+#siedem{
+  
+    transform: rotate(90deg) translate( 90px,0);
+}
+

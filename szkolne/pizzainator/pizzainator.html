@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>pizaainator</h1>
+    <h3>pizza1</h3>
+    <input type="number" name="" id="srednica1"/>
+    <input type="number" name="" id="cena1"/></br>
+    <h3>pizza2</h3>
+    <input type="number" name="" id="srednica2"/>
+    <input type="number" name="" id="cena2"/></br>
+    <button id="btn">licz</button>
+    <div id="wynik"></div>
+
+
+
+<script>
+    s1 =document.querySelector("#srednica1");
+    c1 =document.querySelector("#cena1");
+    s2 =document.querySelector("#srednica2")
+    c2 =document.querySelector("#cena2")
+    wynikdiv = document.querySelector("#wynik");
+    document.querySelector("#btn").addEventListener("click",()=>{
+        wartosc1=((s1.value/2)*(s1.value/2)*Math.PI)/c1.value
+        wartosc2=((s2.value/2)*(s2.value/2)*Math.PI)/c2.value
+        if(wartosc1>wartosc2){
+            wynikdiv.innerHTML = "pizza1 jest bardziej opłacalna";
+        }
+        else if(wartosc2>wartosc1){
+            wynikdiv.innerHTML = "pizza2 jest bardziej opłacalna";
+        }
+        else{
+            wynikdiv.innerHTML = "sa tak samo oplacalne";
+        }
+
+    })
+
+
+</script>
+</body>
+</html>

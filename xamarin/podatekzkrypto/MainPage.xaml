@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="podatekzkrypto.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="oblicz podatek " HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label x:Name="corobi" Text="wplata" HorizontalTextAlignment="End"></Label>
+        <Switch x:Name="wplataSwitch" PropertyChanged="Switch_PropertyChanged"/>
+
+        <Entry x:Name="kwotaentry" Placeholder="podaj kwote"  Keyboard="Numeric"/>
+        <Entry x:Name="kursentry" Placeholder="podaj kurs" Keyboard="Telephone"/>
+        <Button Text="dodaj"  Clicked="Button_Clicked"/>
+        <ListView x:Name="lista"   ItemTapped="lista_ItemTapped">
+            
+        </ListView>
+        <ListView x:Name="podsumowanie"></ListView>
+    </StackLayout>
+
+</ContentPage>

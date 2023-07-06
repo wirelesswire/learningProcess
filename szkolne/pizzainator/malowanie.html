@@ -1,0 +1,60 @@
+<input type="number" name="" id="dlugosc"/>
+<input type="number" name="" id="szerokosc"/>
+<input type="number" name="" id="wysokosc"/>
+<span id="ilem2"></span>
+<input type="number" name="" id="wydajnosc"/>
+<span id="ilewiaderek"></span>
+<button id="btn">licz</button>
+
+</br>
+<input type="number" id="wysokoscodj"/>
+<input type="number" id="szerokoscodj"/>
+<input type="text" id="nazwaodj">
+<button id="odejmij"> odejmij</button>
+<table id="tabela">
+
+</table>
+<script>
+    szer =document.querySelector("#szerokosc");
+    dlu = document.querySelector("#dlugosc")
+    wyso = document.querySelector("#wysokosc");
+    wydaj = document.querySelector("#wydajnosc");
+    ilem = document.querySelector("#ilem2");
+    ilewiad = document.querySelector("#ilewiaderek");
+
+    wysokoscodej=document.querySelector("#wysokoscodj");
+    szerokoscodej=document.querySelector("#szerokoscodj");
+    nazwaodej = document.querySelector("#nazwaodj")
+    table = document.querySelector("#tabela");
+    odejmowanie =[];
+
+    document.querySelector("#odejmij").addEventListener("click",()=>{
+        odejmowanie.push({"pow":wysokoscodej.value*szerokoscodej.value,"nazwa":nazwaodej.value});
+        przelicz();
+    })
+
+    function usun(xd){
+        odejmowanie.splice(xd, 1);
+        przelicz()
+    }
+
+    document.querySelector("#btn").addEventListener("click",()=>{
+        
+        przelicz()
+    })
+    function przelicz(){
+        sumaodej = 0
+        table.innerHTML ="";
+        idx =0
+        odejmowanie.forEach(element => {
+            sumaodej +=element.pow;
+            table.innerHTML+="<tr><td>"+element.nazwa+"</td> <td>"+element.pow+ "</td><td><button onclick='usun("+idx+")'>usun</button></td></tr>";
+            idx++;
+        });
+        pow = (szer.value*dlu.value + 2*dlu.value*wyso.value+2*szer.value*wyso.value) - sumaodej;
+        ilem.innerHTML = pow
+        ilewia =Math.ceil( pow/(10*wydaj.value));
+        ilewiad.innerHTML = ilewia; 
+    }
+
+</script>

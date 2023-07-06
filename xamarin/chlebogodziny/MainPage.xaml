@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chlebogodziny.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Entry x:Name="aktnazwa"></Entry>
+        <Entry x:Name="aktilosc"  Keyboard="Numeric"></Entry>
+        <Entry x:Name="aktstawka" Keyboard="Numeric"></Entry>
+        <Button Clicked="Button_Clicked"></Button>
+        <ListView x:Name="lista"  ItemTapped="lista_ItemTapped" HeightRequest="100"></ListView>
+        <Label x:Name="sumagodzin"></Label>
+        <Label x:Name="sumaplac" ></Label>
+        <Picker x:Name="typchleba" SelectedIndexChanged="typchleba_SelectedIndexChanged"></Picker>
+        <Label x:Name="chlegbogodziny"></Label>
+        
+        
+    </StackLayout>
+
+</ContentPage>
